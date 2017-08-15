@@ -14,9 +14,9 @@ train_data = []
 train_labels = []
 test_data = []
 test_labels = []
-for fname in os.listdir('F:\ML\ML\sentiment labelled sentences',):
+for fname in os.listdir('G:\Academic\ML\Sentiment-Analysis-of-Text\lab',):
     if fname.endswith('.txt'):
-        with open(os.path.join('F:\ML\ML\sentiment labelled sentences',fname), 'r') as input_file:
+        with open(os.path.join('G:\Academic\ML\Sentiment-Analysis-of-Text\lab',fname), 'r') as input_file:
             input_data = input_file.read().split('\n')
             print(fname)
             for i in range(0, len(input_data) - 1):
@@ -100,7 +100,7 @@ print(classification_report(test_labels, prediction_liblinear))
 
 from sklearn.neural_network import MLPClassifier
 
-mlp = MLPClassifier(max_iter=300, alpha=0.00001)
+mlp = MLPClassifier(max_iter=390, alpha=0.00001)
 mlp.fit(train_vectors, train_labels)
 
 predictions = mlp.predict(test_vectors)
