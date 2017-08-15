@@ -88,11 +88,11 @@ time_liblinear_predict = t2 - t1
 # print("Results for SVC(kernel=rbf)")
 # print("Training time: %fs; Prediction time: %fs" % (time_rbf_train, time_rbf_predict))
 # print(classification_report(test_labels, prediction_rbf))
-print("Results for SVC(kernel=linear)")
-print("Training time: %fs; Prediction time: %fs" % (time_linear_train, time_linear_predict))
+print("SVC linear kernel")
+#print("Training time: %fs; Prediction time: %fs" % (time_linear_train, time_linear_predict))
 print(classification_report(test_labels, prediction_linear))
-print("Results for LinearSVC()")
-print("Training time: %fs; Prediction time: %fs" % (time_liblinear_train, time_liblinear_predict))
+print("Linear SVC")
+#print("Training time: %fs; Prediction time: %fs" % (time_liblinear_train, time_liblinear_predict))
 print(classification_report(test_labels, prediction_liblinear))
 
 
